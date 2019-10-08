@@ -9,6 +9,8 @@ public class planegame : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
     private bool engine=false;
+    public float acceleration;
+    public float maxSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +27,14 @@ public class planegame : MonoBehaviour
         }
         if (engine == true)
         {
-            // move the plane forward at a constant rate
-            transform.Translate(Vector3.forward * speed);
-            
+            transform.Translate(Vector3.forward, acceleration * Time.deltaTime, 0);
+            if (acceleration < maxSpeed)
+            {
+                acceleration += 0.25f;
+            }
         }
+
+    
 
             // get the user's vertical input
             verticalInput = Input.GetAxis("Vertical");

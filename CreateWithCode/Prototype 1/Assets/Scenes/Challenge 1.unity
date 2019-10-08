@@ -233,6 +233,8 @@ MonoBehaviour:
   rotationSpeed: 50
   verticalInput: 0
   horizontalInput: 0
+  acceleration: 0
+  maxSpeed: 2000
 --- !u!4 &646655299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: af29f0ea7e5403641b3b244ede69c374,
