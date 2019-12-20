@@ -9,7 +9,7 @@ public class Target : MonoBehaviour
     private float maxSpeed = 16;
     private float maxTorque = 10;
     private float xRange = 4;
-    private float ySpawnPos = -6;
+    private float ySpawnPos = -1;
     private GameManager gameManager;
     public int pointValue;
     public ParticleSystem explosionParticle;
@@ -20,7 +20,7 @@ public class Target : MonoBehaviour
         targetRb = GetComponent<Rigidbody>();
         targetRb.AddForce(RandomForce(), ForceMode.Impulse);
         targetRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
-        transform.position = new Vector3(Random.Range(-4, 4), -6);
+        transform.position = new Vector3(Random.Range(-4, 4), -1);
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
